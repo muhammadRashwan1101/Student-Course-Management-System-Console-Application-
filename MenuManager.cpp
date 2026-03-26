@@ -130,7 +130,7 @@ void MenuManager::searchStudent(){
 //===============================
 void MenuManager::displayAllStudents(){
 	if (Students.size() == 0) {
-		cout << "'\nNo Students Registered\n";
+		cout << "\nNo Students Registered yet\n";
 	}
 	else {
 		for (const auto& student: Students) {

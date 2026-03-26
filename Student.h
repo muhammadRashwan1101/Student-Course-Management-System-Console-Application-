@@ -2,6 +2,8 @@
 #define STUDENT_H
 #include "Person.h"
 #include <set>
+using namespace std;
+
 
 class Student : public Person {
 	int m_ID;
