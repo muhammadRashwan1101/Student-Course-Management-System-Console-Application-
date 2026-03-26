@@ -129,13 +129,18 @@ void MenuManager::searchStudent(){
 // DISPLAY ALL STUDENTS
 //===============================
 void MenuManager::displayAllStudents(){
-	for (const auto& student: Students) {
-		cout << "\nID: " << student.second.getId()
-			<< "\nName: " << student.second.getName()
-			<< "\nGPA: " << student.second.getGpa()
-			<< "\n";
-				student.second.displayCourses();
-				cout << "\n";
+	if (Students.size() == 0) {
+		cout << "'\nNo Students Registered\n";
+	}
+	else {
+		for (const auto& student: Students) {
+			cout << "\nID: " << student.second.getId()
+				<< "\nName: " << student.second.getName()
+				<< "\nGPA: " << student.second.getGpa()
+				<< "\n";
+					student.second.displayCourses();
+					cout << "\n";
+		}
 	}
 }
 
